@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <%- include ./partials/header %>
+    <body>
+    <%- include ./partials/navbar %> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="https://xsgames.co/randomusers/avatar.php?g=male"/>
+            </div>
+            <div class="col-sm">
+                <h2><%=profileData.name%></h2>
+                <p>Username: <%=profileData.username%></p>
+                <h2>Adress</h2>
+                <p>Street: <%=profileData.address.street%></p>
+                <p>City: <%=profileData.address.city%></p>
+                <p>Latitude: <%=profileData.address.geo.lat%>, Longitude: <%=profileData.address.geo.lng%></p>
+
+            </div>
+        </div>
+    </div>
+    <%- include ./partials/scripts %> 
+    </body>
+</html>

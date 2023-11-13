@@ -6,6 +6,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index');
 });
+
 router.post('/submit', async function(req, res, next) {
   const { username, password} = req.body;
   console.log(username + ", " + password);
@@ -15,8 +16,8 @@ router.post('/submit', async function(req, res, next) {
   res.render('dashboard', {userData: userData.data});
 });
 
-// router.get('/test', function(req, res, next) {
-//   res.render('test', {test: "This is a test"})
-// });
+router.get('/test', function(req, res, next) {
+  res.render('test', {test: "This is a test"})
+});
 
 module.exports = router;
