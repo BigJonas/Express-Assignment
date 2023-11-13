@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Log In</title>
-  </head>
+  <%- include ./partials/header %>
   <body>
-    <form method="POST" action="submit">
+    <div class="container">
+      <h1>Log in</h1>
+    </div>
+    <form method="POST" action="submit" class="">
       <!-- TODO: Make form fields required -->
-      <label for="username">Username</label>
-      <input type="text" name="username"/>
-      </br>
-      <label for="password">Password</label>
-      <input type="text" name="password"/>
-      </br>
-      <input type="submit" name="submit"/>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-floating mb-2">
+              <input 
+                type="text" 
+                name="username" 
+                class="form-control" 
+                id="floatingInput" 
+                placeholder="John" 
+                required
+              />
+              <label for="username">Username</label>  
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-floating mb-2">
+              <input 
+                type="password" 
+                name="password" 
+                class="form-control" 
+                id="floatingInput" 
+                placeholder="secret" 
+                required
+              />
+              <label for="password">Password</label>  
+            </div>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col-sm">
+            <input type="submit" name="submit"/>
+          </div>
+        </div>
+
+      </div>
     </form>
+    <%- include ./partials/scripts %> 
   </body>
 </html>
